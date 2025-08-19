@@ -1,3 +1,8 @@
+SOLUTION:
+
+Please find the insomnia api collection at the root level
+
+
 # ReliaQuest Coding Challenge
 
 #### In this assessment you will be tasked with filling out the functionality of different methods that will be listed further down.
