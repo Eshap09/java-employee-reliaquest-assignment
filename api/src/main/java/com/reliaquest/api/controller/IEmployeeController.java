@@ -1,6 +1,8 @@
 package com.reliaquest.api.controller;
 
 import java.util.List;
+
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +38,7 @@ public interface IEmployeeController<Entity, Input> {
     ResponseEntity<List<String>> getTopTenHighestEarningEmployeeNames();
 
     @PostMapping()
-    ResponseEntity<Entity> createEmployee(@RequestBody Input employeeInput);
+    ResponseEntity<Entity> createEmployee(@Valid @RequestBody Input employeeInput);
 
     @DeleteMapping("/{id}")
     ResponseEntity<String> deleteEmployeeById(@PathVariable String id);

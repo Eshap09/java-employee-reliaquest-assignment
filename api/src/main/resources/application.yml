@@ -1,2 +1,24 @@
-spring.application.name: employee-api
-server.port: 8111
+spring:
+  application:
+    name: employee-api
+server:
+  port: 8111
+mockserver:
+  base-url: http://localhost:8112/api/v1/employee
+management:
+  endpoints:
+    web:
+      exposure:
+        include: caches
+
+resilience4j.retry:
+  instances:
+    externalApiRetry:
+      max-attempts: 5
+      wait-duration: 5s
+      enable-exponential-backoff: true
+      exponential-backoff-multiplier: 2
+      max-wait-duration: 30s
+      retry-exceptions:
+        - org.springframework.web.client.HttpClientErrorException$TooManyRequests
+

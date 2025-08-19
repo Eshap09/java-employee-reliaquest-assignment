@@ -14,7 +14,7 @@ public class RandomRequestLimitInterceptor implements HandlerInterceptor {
 
     private static final int REQUEST_LIMIT = RandomGenerator.getDefault().nextInt(5, 10);
     private static final Duration REQUEST_BACKOFF_DURATION =
-            Duration.ofSeconds(RandomGenerator.getDefault().nextInt(30, 90));
+            Duration.ofSeconds(RandomGenerator.getDefault().nextInt(5, 10));
 
     private final AtomicReference<RequestLimit> requestLimit = new AtomicReference<>(RequestLimit.init());
 
