@@ -1,0 +1,304 @@
+type: collection.insomnia.rest/5.0
+name: Java Employee Collection
+meta:
+  id: wrk_5f7801565156487d9c1901bd03a52bbd
+  created: 1755347260285
+  modified: 1755347260285
+  description: ""
+collection:
+  - name: EmployeeApi
+    meta:
+      id: fld_eb66882653924e6dafc7bf5e3159b772
+      created: 1755577219406
+      modified: 1755577219406
+      sortKey: -1755577219406
+      description: ""
+    children:
+      - url: localhost:8111/api/v1/employee
+        name: getEmployeesApi
+        meta:
+          id: req_ed243ddd2afe418ca00dbca01096d4a5
+          created: 1755577260552
+          modified: 1755631385855
+          isPrivate: false
+          description: ""
+          sortKey: -1755577265969
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee/search/Esh
+        name: getEmployeesByNameSearch
+        meta:
+          id: req_ea839a4f2f4a465dabd68c8b8911046f
+          created: 1755577503042
+          modified: 1755631496166
+          isPrivate: false
+          description: ""
+          sortKey: -1755577252502
+        method: GET
+        parameters:
+          - id: pair_f2d018e4cb744d16b19882b77cc9d888
+            name: ""
+            value: ""
+            description: ""
+            disabled: false
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee/b04aa5a5-b6fb-451a-a1d0-1d18f36be3da
+        name: getEmployeesById
+        meta:
+          id: req_1a21e907582c45b694323686e1fa03c4
+          created: 1755578203894
+          modified: 1755631464222
+          isPrivate: false
+          description: ""
+          sortKey: -1755577259235.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee/highestSalary
+        name: getEmployeeHighestSalary
+        meta:
+          id: req_5a16268f964c4dc5bdd61b611d233294
+          created: 1755578328774
+          modified: 1755578352286
+          isPrivate: false
+          description: ""
+          sortKey: -1755577255868.75
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee/topTenHighestEarningEmployeeNames
+        name: getTopTenHighestEarningEmployee
+        meta:
+          id: req_a651f8584a294d33aec5402428a0076f
+          created: 1755578409263
+          modified: 1755578413691
+          isPrivate: false
+          description: ""
+          sortKey: -1755577254185.375
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee
+        name: postCreateEmployee
+        meta:
+          id: req_01dfc173b91548d2b19d4ba23a5b6a78
+          created: 1755583055909
+          modified: 1755631411777
+          isPrivate: false
+          description: ""
+          sortKey: -1755577262602.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Esh Gupta",
+            	"salary": "3000000",
+            	"age": 25,
+            	"title": "Software Engineer"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8111/api/v1/employee/b04aa5a5-b6fb-451a-a1d0-1d18f36be3da
+        name: deleteEmployeeById
+        meta:
+          id: req_5f8ce88c2f864607a65e7885bb109d9b
+          created: 1755583719480
+          modified: 1755631556117
+          isPrivate: false
+          description: ""
+          sortKey: -1755577264285.625
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: MockApi
+    meta:
+      id: fld_dafe31c7dfc84b838a06b6ffd9d8ebc4
+      created: 1755577227002
+      modified: 1755577227002
+      sortKey: -1755577227002
+      description: ""
+    children:
+      - url: localhost:8112/api/v1/employee/b6512137-fa56-4bec-8af7-9acd3092ec6e
+        name: getEmployeeById-mockserver
+        meta:
+          id: req_fda8c1c86ce9469eafd3d8ac48b2118e
+          created: 1755347280257
+          modified: 1755577238753
+          isPrivate: false
+          description: ""
+          sortKey: -1755577238735
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8112/api/v1/employee
+        name: getEmployees-mockserver
+        meta:
+          id: req_89e295a9115340a9b7e0d21a4e188ee5
+          created: 1755347427353
+          modified: 1755577241758
+          isPrivate: false
+          description: ""
+          sortKey: -1755577238835
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8112/api/v1/employee
+        name: addEmployee-mockserver
+        meta:
+          id: req_7c5e64c5e5cc48ad89b8ee7e61963bb7
+          created: 1755347479566
+          modified: 1755585103260
+          isPrivate: false
+          description: ""
+          sortKey: -1755577238935
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Eshap Gupta",
+            	"salary": "3000000",
+            	"age": 25,
+            	"title": "Software Engineer"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8112/api/v1/employee
+        name: deleteEmployee-mockserver
+        meta:
+          id: req_e9598aab9fbf428d9d6bb98c439c71d5
+          created: 1755347610560
+          modified: 1755577245728
+          isPrivate: false
+          description: ""
+          sortKey: -1755577239035
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Spinka"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.4.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_fe6eb2feec0acdab5d967a72416bab92858e9801
+    created: 1755347260291
+    modified: 1755347260291
+environments:
+  name: Base Environment
+  meta:
+    id: env_fe6eb2feec0acdab5d967a72416bab92858e9801
+    created: 1755347260289
+    modified: 1755347260289
+    isPrivate: false
